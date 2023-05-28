@@ -2,11 +2,6 @@
 using Data.Repositories.Implementations;
 using Data.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data
 {
@@ -17,6 +12,8 @@ namespace Data
         
 
         private ICustomerRepository _customer = null!;
+        private IProductRepository _product = null!;
+        private ICategoryRepository _category = null!;
 
         public UnitOfWork(FarmerConnectContext context)
         {
@@ -26,6 +23,16 @@ namespace Data
         public ICustomerRepository Customer
         {
             get { return _customer ??= new CustomerRepository(_context); }
+        }
+
+        public IProductRepository Product
+        {
+            get { return _product ??= new ProductRepository(_context); }
+        }
+
+        public ICategoryRepository Category
+        {
+            get { return _category ??= new CategoryRepository(_context); }
         }
 
         public async Task<int> SaveChanges()

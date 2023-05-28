@@ -5,7 +5,7 @@ using Data.Models.Views;
 using Microsoft.AspNetCore.Mvc;
 using Service.Interfaces;
 using System.ComponentModel.DataAnnotations;
-using Utility.Constraints;
+using Utility.Constant;
 
 
 namespace Application.Controllers

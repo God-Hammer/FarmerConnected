@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Service.Interfaces;
 using System.Security.Cryptography;
-using Utility.Constraints;
+using Utility.Constant;
 
 namespace Service.Implementations
 {
@@ -181,7 +181,7 @@ namespace Service.Implementations
                 }
                 else
                 {
-                    status = UserStatus.Blocked;
+                    status = UserStatus.DeActivated;
                 }
             }
             return status;

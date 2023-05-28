@@ -1,4 +1,4 @@
-﻿namespace Utility.Constraints
+﻿namespace Utility.Constant
 {
     public enum UserRole
     {

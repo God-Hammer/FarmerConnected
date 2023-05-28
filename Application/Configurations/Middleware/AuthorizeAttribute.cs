@@ -1,7 +1,7 @@
 ﻿using Data.Models.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Utility.Constraints;
+using Utility.Constant;
 
 namespace Application.Configurations.Middleware
 {

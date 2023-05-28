@@ -1,6 +1,5 @@
 ﻿using Application.Configurations.Middleware;
 using Data;
-using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.OpenApi.Models;
 using Service.Implementations;
 using Service.Interfaces;
@@ -14,7 +13,8 @@ namespace Application.Configurations
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ISendMailService, SendMailService>();
-
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICategoryService, CategoryService>();
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
         }
