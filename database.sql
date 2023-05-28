@@ -81,9 +81,9 @@ Go
 
 CREATE TABLE Post(
     Id uniqueidentifier primary key NOT NULL,
-    ProductName nvarchar(256)not null,
+    Title nvarchar(256)not null,
 	MarketPriceId uniqueidentifier foreign key references MarketPrice(Id) NOT NULL,
-	Price int not null,
+	Description nvarchar(max) not null,
 	UpdateAt datetime,
 	CreateAt datetime not null default getdate(),
 );

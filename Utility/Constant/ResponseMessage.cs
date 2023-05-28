@@ -14,6 +14,7 @@
 
         public const string ProductNotFound = "Not found this product";
 
+        public const string MarketPriceNotFound = "Not found";
 
     }
 }

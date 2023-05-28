@@ -10,6 +10,8 @@ namespace Data.Mapping
         {
             CreateMap<Product, ProductViewModel>();
             CreateMap<Category, CategoryViewModel>();
+            CreateMap<MarketPrice, MarketPriceViewModel>();
+            CreateMap<Post, PostViewModel>();
         }
     }
 }
