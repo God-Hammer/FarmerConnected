@@ -15,6 +15,8 @@ namespace Application.Configurations
             services.AddScoped<ISendMailService, SendMailService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IMarketPriceService, MarketPriceService>();
+            
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
         }

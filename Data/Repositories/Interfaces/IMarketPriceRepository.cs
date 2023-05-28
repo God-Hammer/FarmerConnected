@@ -2,7 +2,7 @@
 
 namespace Data.Repositories.Interfaces
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface IMarketPriceRepository : IRepository<MarketPrice>
     {
     }
 }

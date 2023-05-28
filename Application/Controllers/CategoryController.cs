@@ -32,7 +32,6 @@ namespace Application.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(CategoryViewModel), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
         public async Task<IActionResult> CreateCategory([FromBody] CreateCategoryRequest request)
         {
             var result = await _categoryService.CreateCategory(request);

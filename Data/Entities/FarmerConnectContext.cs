@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Data.Entities
 {
@@ -25,7 +28,7 @@ namespace Data.Entities
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 //optionsBuilder.UseSqlServer("Server=TAN-TRUNG\\TANTRUNG;Database=FarmerConnect;Persist Security Info=False;User ID=sa;Password=123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;");
             }
         }
@@ -108,7 +111,7 @@ namespace Data.Entities
                     .HasColumnType("datetime")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.Property(e => e.ProductName).HasMaxLength(256);
+                entity.Property(e => e.Title).HasMaxLength(256);
 
                 entity.Property(e => e.UpdateAt).HasColumnType("datetime");
 
@@ -116,7 +119,7 @@ namespace Data.Entities
                     .WithMany(p => p.Posts)
                     .HasForeignKey(d => d.MarketPriceId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Post__MarketPric__37A5467C");
+                    .HasConstraintName("FK__Post__MarketPric__5FB337D6");
             });
 
             modelBuilder.Entity<Product>(entity =>
