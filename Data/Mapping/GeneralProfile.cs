@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
 using Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Data.Models.Views;
 
 namespace Data.Mapping
 {
@@ -12,8 +8,8 @@ namespace Data.Mapping
     {
         public GeneralProfile()
         {
-            //CreateMap<Product, ProductViewModel>();
-
+            CreateMap<Product, ProductViewModel>();
+            CreateMap<Category, CategoryViewModel>();
         }
     }
 }

@@ -3,7 +3,7 @@ using Data.Models.Requests.Put;
 using Data.Models.Views;
 using Microsoft.AspNetCore.Mvc;
 using Service.Interfaces;
-using Utility.Constraints;
+using Utility.Constant;
 
 namespace Application.Controllers
 {

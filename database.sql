@@ -1,4 +1,4 @@
-Use master
+﻿Use master
 Go
 CREATE DATABASE FarmerConnect
 Go
@@ -35,6 +35,11 @@ CREATE TABLE Category (
 );
 Go
 
+INSERT INTO Category (Id, Name, Description)
+VALUES
+(NEWID(), N'Nông nghiệp', N'Danh mục sản phẩm nông nghiệp');
+Go
+
 
 
 CREATE TABLE Product (
@@ -49,6 +54,13 @@ CREATE TABLE Product (
 	CreateAt datetime not null default getdate(),
 	UpdateAt datetime,
 );
+Go
+
+INSERT INTO Product (Id, Name, Price, Quantity, Description, CustomerId, CategoryId, Status)
+VALUES
+(NEWID(), N'Lúa mì', 10000, 50, N'Mô tả về lúa mì', '11aba470-9336-468f-89eb-fe6684ee2235', '9a9c8df9-35fd-4a1e-90de-6c2f7ad2294f', N'Đang bán'),
+(NEWID(), N'Hạt giống rau', 5000, 100, N'Mô tả về hạt giống rau', '11aba470-9336-468f-89eb-fe6684ee2235', '9a9c8df9-35fd-4a1e-90de-6c2f7ad2294f', N'Đang bán'),
+(NEWID(), N'Phân bón hữu cơ', 20000, 30, N'Mô tả về phân bón hữu cơ', '11aba470-9336-468f-89eb-fe6684ee2235', '9a9c8df9-35fd-4a1e-90de-6c2f7ad2294f', N'Đang bán');
 Go
 
 CREATE TABLE ProductImage (

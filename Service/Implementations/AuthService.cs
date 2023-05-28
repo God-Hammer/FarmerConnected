@@ -11,7 +11,7 @@ using Service.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Utility.Constraints;
+using Utility.Constant;
 using Utility.Settings;
 
 namespace Service.Implementations
