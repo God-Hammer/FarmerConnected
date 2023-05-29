@@ -1,6 +1,4 @@
-﻿using Data.Entities;
-
-namespace Data.Models.Views
+﻿namespace Data.Models.Views
 {
     public class PostViewModel
     {
